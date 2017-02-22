@@ -7,6 +7,6 @@ function onRequest(request, response) {
     response.end();
 }
 
-let port = 9999;
+let port = process.env.PORT || 9999;
 http.createServer(onRequest).listen(port);
 console.log(`Server started. Listening on port ${port}`);
